@@ -1,0 +1,172 @@
+.landing-header {
+	width: 100%;
+	height: 100%;
+	background: url('/static/images/header.jpg');
+}
+
+.header-content {
+	padding: 16px 64px;
+}
+
+.header-content .header-content-container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.header-content-container .header-content-holder {
+	width: 500px;
+	margin-top: 100px;
+}
+
+.header-content-holder h2 {
+	font-size: 48px;
+	padding: 20px 0;
+	color: white;
+}
+
+.header-content-holder h4 {
+	font-size: 28px;
+	padding: 20px 0;
+	color: white;
+}
+
+.header-content-holder .header-content-action {
+	font-size: 20px;
+	margin: 20px 0;
+	color: white;
+	background: #f84600;
+	border: none;
+	padding: 8px 48px;
+	cursor: pointer;
+}
+
+.content-section {
+	width: 100%;
+	display: block;
+	overflow: auto;
+	color: #4a4a4a;
+	background-position: right bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.content-section.section1 {
+	background-image: url('/static/images/section1.png');
+}
+
+.content-section.section2 {
+	background-image: url('/static/images/section2.jpg');
+}
+
+.content-section .content-section-container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.content-section-container .content-section-holder {
+	width: 400px;
+	margin-top: 100px;
+	margin-bottom: 240px;
+	display: block;
+}
+
+.content-section-container h3 {
+	font-size: 32px;
+	line-height: 1.1em;
+	margin-bottom: 32px;
+}
+
+.content-section-container p {
+	line-height: 1.1em;
+}
+
+.site-footer {
+	width: 100%;
+	background: #4a4a4a;
+}
+
+.site-footer .footer-container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+
+.footer-container h3 {
+	font-size: 44px;
+	margin-bottom: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+.footer-container p {
+	line-height: 1.5em;
+	color: white;
+}
+
+.footer-container .footer-contact-form {
+	margin: 16px 0;
+}
+
+.footer-contact-form input {
+	background: none;
+	border: none;
+	background: white;
+	padding: 16px 8px;
+	font-size: 18px;
+	margin-right: 8px;
+}
+
+.footer-contact-form .footer-contact-action {
+	display: block;
+	border: none;
+	background: #f84600;
+	color: white;
+	padding: 16px 64px;
+	cursor: pointer;
+	margin-top: 16px;
+	font-size: 18px;
+}
+
+/*================ Contact Dialog ===========*/
+
+.contact-dialog {
+	padding: 100px 0;
+}
+
+.contact-dialog h3 {
+	font-size: 44px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.contact-dialog p {
+	line-height: 1.5em;
+}
+
+.contact-dialog .dialog-contact-form {
+	margin: 16px 0;
+}
+
+.dialog-contact-form input {
+	background: none;
+	border: none;
+	background: white;
+	padding: 16px 8px;
+	font-size: 18px;
+	margin-right: 8px;
+}
+
+.dialog-contact-form .dialog-contact-action {
+	display: block;
+	border: none;
+	background: #f84600;
+	color: white;
+	padding: 16px 64px;
+	cursor: pointer;
+	margin-top: 16px;
+	font-size: 18px;
+}

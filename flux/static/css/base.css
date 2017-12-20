@@ -1,0 +1,229 @@
+/*======================= CSS RESET ==========================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html{
+        width: 100%;
+        height: 100%;
+}
+
+body {
+    line-height: 1;
+    font-size: 100%;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 800px) {
+        body {
+                padding: 0;
+        }
+}
+
+ol, ul {
+    list-style: none;
+}
+
+@media (max-width: 800px) {
+    body {
+        /*width: 100vw;*/
+    }
+
+    .hide-mb {
+        display: none !important;
+    }
+}
+
+@media (min-width: 800px) {
+    .show-mb {
+        display: none !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .show-mb {
+        display: default !important;
+    }
+}
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+[placeholder]{
+        text-overflow:ellipsis;
+}
+
+/*===================CSS STARTS HERE=========================*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*================ HEADER ===============*/
+
+.site-header {
+        width: 100%;
+        background-color: white;
+        padding: 20px 32px;
+        height: 72px;
+}
+
+.site-header .header-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 4px 0;
+}
+
+.header-container .header-logo-holder {
+        display: inline-block;
+        float: left;
+}
+
+.header-logo-holder .header-logo {
+        background: grey;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+}
+
+.header-logo-holder h1 {
+        font-size: 24px;
+        display: inline-block;
+        vertical-align: top;
+}
+
+.header-container .header-action-holder {
+        display: inline-block;
+        float: right;
+}
+
+.header-action-holder .header-action {
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.7);
+        border: none;
+}
+
+
+.header-action-holder .header-action.action-solid {
+        font-size: 18px;
+        color: white;
+        background: #f84600;
+        padding: 8px 8px;
+        margin-left: 32px;
+        cursor: pointer;
+}
+
+/*================= Clearfix =====================*/
+.clearfix:before,
+.clearfix:after {
+        content: "";
+        display: table;
+}
+.clearfix:after {
+        clear: both;
+}
+.clearfix {
+        clear: both;
+        *zoom: 1;
+}
+
+/*========== Dialog ==============*/
+
+.dialog {
+    opacity: 0;
+    width: 100%;
+    height: 0;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+}
+
+.dialog.open {
+    opacity: 1;
+    height: 100%;
+    display: block;
+}
+
+.dialog .dialog-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+.dialog .dialog-content-holder {
+    position: absolute;
+    width: 80%;
+    max-width: 1000px;
+    min-height: 200px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f1f1f1;
+    z-index: 5;
+}
+
+.dialog-content-holder .dialog-action-close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: black;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.dialog-content-holder .dialog-content {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}

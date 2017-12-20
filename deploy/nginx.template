@@ -1,0 +1,34 @@
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        ## Block download agenta
+        if ($http_user_agent ~* LWP::Simple|wget|libwww-perl) {
+              return 403;
+        }
+
+        location /static {
+                alias /home/leo/sites/104.199.146.85/static;
+
+                location ~* ^/static.*\.(ico|gif|jpeg|jpg|png|svg|eot|woff|ttf)$ {
+                        expires 30d;
+                }
+
+                location ~* ^/static.*\.(css|js)$ {
+                        expires 1d;
+                }
+        }
+
+        location /media {
+                alias /home/leo/sites/104.199.146.85/media;
+
+                location ~* ^/media.*\.(ico|gif|jpeg|jpg|png|svg)$ {
+                        expires 30d;
+                }
+        }
+
+        location / {
+            proxy_set_header Host $host;
+            proxy_pass http://unix:/tmp/samara.socket;
+        }
+}

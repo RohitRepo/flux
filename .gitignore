@@ -1,0 +1,8 @@
+*.pyc
+*.swp
+*~
+.idea/
+bower_components/
+node_modules/
+build/
+

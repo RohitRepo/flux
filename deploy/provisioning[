@@ -1,0 +1,5 @@
+sudo apt-get install nginx python3-dev libssl-dev npm
+
+ln -s /usr/bin/nodejs /usr/bin/node
+
+sudo npm install -g grunt-cli
