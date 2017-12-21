@@ -2,23 +2,23 @@ from fabric.contrib.files import append, exists, sed
 from fabric.api import env, local, run
 import random
 
-REPO_URL = 'https://rohit_magic@bitbucket.org/samast/samara.git'
+REPO_URL = 'https://github.com/RohitRepo/flux.git'
 
 
 def deploy():
-    site_folder = '/home/%s/sites/samara' % (env.user)
+    site_folder = '/home/%s/sites/flux' % (env.user)
     source_folder = site_folder + '/source'
     _create_directory_structure_if_necessary(site_folder)
     _get_latest_source(source_folder)
     _update_settings(source_folder, env.host)
     _update_virtualenv(source_folder)
-    _update_npm(source_folder)
-    _build_client(source_folder)
+    # _update_npm(source_folder)
+    # _build_client(source_folder)
     _update_static_files(source_folder)
     _update_database(source_folder)
     _restart_service()
-    _copy_celery_config(source_folder)
-    _restart_celery()
+    # _copy_celery_config(source_folder)
+    # _restart_celery()
 
 
 def _create_directory_structure_if_necessary(site_folder):
@@ -36,14 +36,14 @@ def _get_latest_source(source_folder):
 
 
 def _update_settings(source_folder, site_name):
-    settings_path = source_folder + '/samara/settings.py'
+    settings_path = source_folder + '/flux/settings.py'
     sed(settings_path, "DEBUG = True", "DEBUG = False")
     sed(settings_path,
         'ALLOWED_HOSTS =.+$',
         'ALLOWED_HOSTS = ["%s", "localhost", "webapi.magicpin.in", "www.webapi.magicpin.in", "*"]' % (site_name,)
         )
 
-    secret_key_file = source_folder + '/samara/secret_key.py'
+    secret_key_file = source_folder + '/flux/secret_key.py'
     if not exists(secret_key_file):
         chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
         key = ''.join(random.SystemRandom().choice(chars) for _ in range(50))
@@ -59,11 +59,11 @@ def _update_virtualenv(source_folder):
         virtualenv_folder, source_folder))
 
 def _update_npm(source_folder):
-    npm_folder = source_folder + '/samara'
+    npm_folder = source_folder + '/flux'
     run('cd %s && npm install' % (npm_folder,))
 
 def _build_client(source_folder):
-    client_folder = source_folder + '/samara'
+    client_folder = source_folder + '/flux'
     run('cd %s && npm run build && grunt build' % (client_folder,))
 
 def _update_static_files(source_folder):
@@ -75,7 +75,7 @@ def _update_database(source_folder):
         source_folder,))
 
 def _restart_service():
-    run('sudo service samara restart')
+    run('sudo service flux restart')
 
 def _copy_celery_config(source_folder):
     run('sudo cp %s/deploy/celeryd_conf /etc/default/celeryd' % (source_folder))
