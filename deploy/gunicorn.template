@@ -1,13 +1,13 @@
 [Unit]
-Description=Gunicorn server for samara
+Description=Gunicorn server for flux
 
 [Service]
 Restart=on-failure  
-User=leo  
-WorkingDirectory=/home/leo/sites/104.199.146.85/source  
-ExecStart=/home/leo/sites/104.199.146.85/virtualenv/bin/gunicorn \
-    --bind unix:/tmp/samara.socket \
-    samara.wsgi:application  
+User=flux  
+WorkingDirectory=/home/flux/sites/flux/source  
+ExecStart=/home/flux/sites/flux/virtualenv/bin/gunicorn \
+    --bind unix:/tmp/flux.socket \
+    flux.wsgi:application  
 
 [Install]
 WantedBy=multi-user.target 

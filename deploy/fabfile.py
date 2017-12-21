@@ -4,6 +4,7 @@ import random
 
 REPO_URL = 'https://github.com/RohitRepo/flux.git'
 
+#
 
 def deploy():
     site_folder = '/home/%s/sites/flux' % (env.user)
@@ -54,7 +55,7 @@ def _update_settings(source_folder, site_name):
 def _update_virtualenv(source_folder):
     virtualenv_folder = source_folder + '/../virtualenv'
     if not exists(virtualenv_folder + '/bin/pip'):
-        run('virtualenv  --no-site-packages -p python3 %s' % (virtualenv_folder,))
+        run('virtualenv  --no-site-packages %s' % (virtualenv_folder,))
     run('%s/bin/pip install -r %s/deploy/requirements.txt' % (
         virtualenv_folder, source_folder))
 

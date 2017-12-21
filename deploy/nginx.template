@@ -8,7 +8,7 @@ server {
         }
 
         location /static {
-                alias /home/leo/sites/104.199.146.85/static;
+                alias /home/flux/sites/flux/static;
 
                 location ~* ^/static.*\.(ico|gif|jpeg|jpg|png|svg|eot|woff|ttf)$ {
                         expires 30d;
@@ -20,7 +20,7 @@ server {
         }
 
         location /media {
-                alias /home/leo/sites/104.199.146.85/media;
+                alias /home/flux/sites/flux/media;
 
                 location ~* ^/media.*\.(ico|gif|jpeg|jpg|png|svg)$ {
                         expires 30d;
@@ -29,6 +29,6 @@ server {
 
         location / {
             proxy_set_header Host $host;
-            proxy_pass http://unix:/tmp/samara.socket;
+            proxy_pass http://unix:/tmp/flux.socket;
         }
 }
