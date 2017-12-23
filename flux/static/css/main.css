@@ -2,9 +2,11 @@
 	width: 100%;
 	height: 100%;
 	background: url('/static/images/header.jpg');
+	background-position: bottom;
+	background-size: cover;
 }
 
-.header-content {
+.landing-header .header-content {
 	padding: 16px 64px;
 }
 
@@ -23,6 +25,8 @@
 	font-size: 48px;
 	padding: 20px 0;
 	color: white;
+	font-family: 'Archivo', sans-serif;
+	font-weight: bold;
 }
 
 .header-content-holder h4 {
@@ -36,27 +40,65 @@
 	margin: 20px 0;
 	color: white;
 	background: #f84600;
+	border-radius: 3px;
 	border: none;
 	padding: 8px 48px;
 	cursor: pointer;
 }
+
+@media (max-width: 800px) {
+	.landing-header {
+		height: 400px;
+	}
+
+	.landing-header .header-content {
+		padding: 16px;
+		padding-top: 64px;
+		text-align: center;
+	}
+
+	.header-content-container .header-content-holder {
+		width: 100%;
+		margin: 0;
+	}
+
+	.header-content-holder h2 {
+		font-size: 32px;
+		padding: 8px 0;
+	}
+
+	.header-content-holder h4 {
+		font-size: 18px;
+		padding: 8px 0;
+	}
+
+	.header-content-holder .header-content-action {
+		font-size: 18px;
+		padding: 8px 48px;
+	}
+}
+
+/*===========Content Section==========*/
 
 .content-section {
 	width: 100%;
 	display: block;
 	overflow: auto;
 	color: #4a4a4a;
-	background-position: right bottom;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .content-section.section1 {
-	background-image: url('/static/images/section1.png');
+	background-image: url('/static/images/section1.jpg');
+	background-position: right center;
 }
 
 .content-section.section2 {
 	background-image: url('/static/images/section2.jpg');
+	background-position: center;
+	text-align: center;
+	color: white;
 }
 
 .content-section .content-section-container {
@@ -65,22 +107,60 @@
 	margin: 0 auto;
 }
 
+.content-section.section2 .content-section-container {
+	text-align: center;
+}
+
 .content-section-container .content-section-holder {
 	width: 400px;
-	margin-top: 100px;
-	margin-bottom: 240px;
+	margin-top: 120px;
+	margin-bottom: 320px;
 	display: block;
 }
 
+.content-section.section2 .content-section-holder {
+	width: 100%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .content-section-container h3 {
-	font-size: 32px;
+	font-size: 44px;
 	line-height: 1.1em;
 	margin-bottom: 32px;
+	font-family: 'Archivo', sans-serif;
+	font-weight: bold;
 }
 
 .content-section-container p {
-	line-height: 1.1em;
+	line-height: 1.2em;
+	font-size: 18px;
 }
+
+@media (max-width: 800px) {
+	.content-section-container .content-section-holder {
+		width: 100%;
+		text-align: center;
+		padding: 8px;
+		margin-bottom: 120px;
+	}
+
+	.content-section-container h3 {
+		font-size: 32px;
+	}
+
+	.content-section.section1 {
+		background: none
+	}
+
+	.content-section-container img  {
+		width: 100%;
+		margin-top: 16px;
+	}
+}
+
+/*===========Footer=============*/
 
 .site-footer {
 	width: 100%;
@@ -92,19 +172,23 @@
 	max-width: 1000px;
 	margin: 0 auto;
 	padding-top: 100px;
-	padding-bottom: 200px;
 }
 
 .footer-container h3 {
 	font-size: 44px;
 	margin-bottom: 20px;
 	color: white;
+	font-family: 'Archivo', sans-serif;
 	font-weight: bold;
 }
 
 .footer-container p {
 	line-height: 1.5em;
 	color: white;
+}
+
+.footer-container .footer-callus {
+	margin-bottom: 160px;
 }
 
 .footer-container .footer-contact-form {
@@ -118,55 +202,42 @@
 	padding: 16px 8px;
 	font-size: 18px;
 	margin-right: 8px;
+	border-radius: 3px;
 }
 
 .footer-contact-form .footer-contact-action {
 	display: block;
 	border: none;
 	background: #f84600;
+	border-radius: 3px;
 	color: white;
-	padding: 16px 64px;
+	padding: 16px 60px;
 	cursor: pointer;
 	margin-top: 16px;
 	font-size: 18px;
 }
 
-/*================ Contact Dialog ===========*/
-
-.contact-dialog {
-	padding: 100px 0;
-}
-
-.contact-dialog h3 {
-	font-size: 44px;
-	margin-bottom: 20px;
-	font-weight: bold;
-}
-
-.contact-dialog p {
-	line-height: 1.5em;
-}
-
-.contact-dialog .dialog-contact-form {
-	margin: 16px 0;
-}
-
-.dialog-contact-form input {
-	background: none;
-	border: none;
-	background: white;
-	padding: 16px 8px;
-	font-size: 18px;
-	margin-right: 8px;
-}
-
-.dialog-contact-form .dialog-contact-action {
+.footer-container .footer-creds{
+	width: 100%;
+	color: white;
+	padding: 32px 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
 	display: block;
-	border: none;
-	background: #f84600;
-	color: white;
-	padding: 16px 64px;
-	cursor: pointer;
-	margin-top: 16px;
-	font-size: 18px;
+}
+
+@media (max-width: 800px) {
+	.site-footer .footer-container {
+		text-align: center;
+	}
+
+	.footer-contact-form input {
+		margin: 0;
+		margin-bottom: 16px;
+	}
+
+	.footer-contact-form .footer-contact-action {
+		margin: 0 auto;
+	}
+
+
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="418px" height="92px" viewBox="0 0 418 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <text id="FluxFlow" font-family="Helvetica-Bold, Helvetica" font-size="75" font-weight="bold" letter-spacing="-2.4000001" fill="#2F2F2F">
+                <tspan x="111" y="75">FluxFlo</tspan>
+                <tspan x="360.838183" y="75">w</tspan>
+            </text>
+            <path d="M8.7534896,73 C6.52488868,69.9309605 4.66634492,66.5757859 3.24338253,63.0000006 L88.7566217,63 C87.3336551,66.5757859 85.4751113,69.9309605 83.2465104,73 L8.75348596,73 Z M18.6637319,83 C26.3061256,88.6557033 35.7625116,92 46,92 C56.2374884,92 65.6938744,88.6557033 73.3362681,83 L18.6637319,83 Z M0.529206845,53 C0.180727541,50.7175284 0,48.3798698 0,46 C0,20.5949015 20.5949015,0 46,0 C71.4050985,0 92,20.5949015 92,46 C92,48.3798698 91.8192725,50.7175284 91.4707932,53 L0.529206845,53 Z" id="Combined-Shape" fill="#DE4A2C"></path>
+        </g>
+    </g>
+</svg>

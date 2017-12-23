@@ -4,7 +4,7 @@ import random
 
 REPO_URL = 'https://github.com/RohitRepo/flux.git'
 
-#
+#fab deploy:host=flux@35.186.144.232
 
 def deploy():
     site_folder = '/home/%s/sites/flux' % (env.user)

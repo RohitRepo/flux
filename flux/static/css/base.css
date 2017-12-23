@@ -102,70 +102,70 @@ a {
 /*================ HEADER ===============*/
 
 .site-header {
-        width: 100%;
-        background-color: white;
-        padding: 20px 32px;
-        height: 72px;
+    width: 100%;
+    background-color: white;
+    padding: 20px 32px;
+    height: 72px;
 }
 
 .site-header .header-container {
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 4px 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4px 0;
 }
 
 .header-container .header-logo-holder {
-        display: inline-block;
-        float: left;
+    display: inline-block;
+    float: left;
 }
 
 .header-logo-holder .header-logo {
-        background: grey;
-        width: 24px;
-        height: 24px;
-        display: inline-block;
+    background: grey;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
 }
 
 .header-logo-holder h1 {
-        font-size: 24px;
-        display: inline-block;
-        vertical-align: top;
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .header-container .header-action-holder {
-        display: inline-block;
-        float: right;
+    display: inline-block;
+    float: right;
 }
 
 .header-action-holder .header-action {
-        font-size: 18px;
-        color: rgba(0, 0, 0, 0.7);
-        border: none;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+    border: none;
 }
 
-
 .header-action-holder .header-action.action-solid {
-        font-size: 18px;
-        color: white;
-        background: #f84600;
-        padding: 8px 8px;
-        margin-left: 32px;
-        cursor: pointer;
+    font-size: 18px;
+    color: white;
+    background: #f84600;
+    padding: 8px 8px;
+    margin-left: 32px;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
 /*================= Clearfix =====================*/
 .clearfix:before,
 .clearfix:after {
-        content: "";
-        display: table;
+    content: "";
+    display: table;
 }
 .clearfix:after {
-        clear: both;
+    clear: both;
 }
 .clearfix {
-        clear: both;
-        *zoom: 1;
+    clear: both;
+    *zoom: 1;
 }
 
 /*========== Dialog ==============*/
@@ -226,4 +226,47 @@ a {
     width: 80%;
     max-width: 700px;
     margin: 0 auto;
+}
+
+/*================ Contact Dialog ===========*/
+
+.contact-dialog {
+    padding: 100px 0;
+}
+
+.contact-dialog h3 {
+    font-size: 44px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Archivo', sans-serif;
+}
+
+.contact-dialog p {
+    line-height: 1.5em;
+}
+
+.contact-dialog .dialog-contact-form {
+    margin: 16px 0;
+}
+
+.dialog-contact-form input {
+    background: none;
+    border: none;
+    background: white;
+    padding: 16px 8px;
+    font-size: 18px;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.dialog-contact-form .dialog-contact-action {
+    display: block;
+    border: none;
+    background: #f84600;
+    border-radius: 3px;
+    color: white;
+    padding: 16px 64px;
+    cursor: pointer;
+    margin-top: 16px;
+    font-size: 18px;
 }
