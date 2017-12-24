@@ -121,9 +121,7 @@ a {
 }
 
 .header-logo-holder .header-logo {
-    background: grey;
-    width: 24px;
-    height: 24px;
+    height: 32px;
     display: inline-block;
 }
 
@@ -152,6 +150,12 @@ a {
     margin-left: 32px;
     cursor: pointer;
     border-radius: 3px;
+}
+
+@media (max-width: 800px) {
+    .header-container .header-action-holder {
+        padding-top: 10px
+    }
 }
 
 /*================= Clearfix =====================*/
