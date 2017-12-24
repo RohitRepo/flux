@@ -105,6 +105,7 @@ a {
     width: 100%;
     background-color: white;
     padding: 20px 32px;
+    padding-top: 0;
     height: 72px;
 }
 
@@ -121,7 +122,7 @@ a {
 }
 
 .header-logo-holder .header-logo {
-    height: 32px;
+    height: 56px;
     display: inline-block;
 }
 
@@ -134,6 +135,7 @@ a {
 .header-container .header-action-holder {
     display: inline-block;
     float: right;
+    padding-top: 12px;
 }
 
 .header-action-holder .header-action {
@@ -154,7 +156,7 @@ a {
 
 @media (max-width: 800px) {
     .header-container .header-action-holder {
-        padding-top: 10px
+        padding-top: 24px
     }
 }
 
