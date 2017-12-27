@@ -56,7 +56,8 @@
 		<div class="footer-container">
 			<h3>Go solar now!</h3>
 			<p>Enter your details below. We will get in touch with you soon and give you a personalized quote</p>
-			<form class="footer-contact-form">
+			<form class="footer-contact-form" method="POST">
+				{% csrf_token %}
 				<input type="text" name="Name" placeholder="Name">
 				<input type="text" name="Mobile" placeholder="Mobile">
 				<button class="footer-contact-action">
@@ -77,7 +78,8 @@
 				<div class="dialog-content contact-dialog">
 					<h3>Go solar now!</h3>
 					<p>Enter your details below. We will get in touch with you soon and give you a personalized quote.</p>
-					<form class="dialog-contact-form">
+					<form class="dialog-contact-form" method="POST">
+						{% csrf_token %}
 						<input type="text" name="Name" placeholder="Name">
 						<input type="text" name="Mobile" placeholder="Mobile">
 						<button class="dialog-contact-action">
