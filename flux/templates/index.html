@@ -57,7 +57,7 @@
 	<footer class="site-footer">
 		<div class="footer-container">
 			<h3>Go solar now!</h3>
-			<p>Enter your details below. We will get in touch with you soon and give you a personalized quote</p>
+			<p>Enter your details below. We will get in touch asap and give you a personalized quote</p>
 			<form class="footer-contact-form" method="POST">
 				{% csrf_token %}
 				<input type="text" name="Name" placeholder="Name">
@@ -67,6 +67,8 @@
 				</button>
 			</form>
 			<p class="footer-callus">Or you can call us on 09735565366 anytime if you prefer that.</p>
+
+			<p>Office: 4th floor, Ark chambers, Kavuri Hills Phase 1, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033</p>
 			<div class="footer-creds">
 				FluxFlow Ventures Private Limited
 			</div>
@@ -79,7 +81,7 @@
 				<img src="/static/images/cancel.svg" class="dialog-action-close" onClick="hideContact()">
 				<div class="dialog-content contact-dialog">
 					<h3>Go solar now!</h3>
-					<p>Enter your details below. We will get in touch with you soon and give you a personalized quote.</p>
+					<p>Enter your details below. We will get in touch asap and give you a personalized quote.</p>
 					<form class="dialog-contact-form" method="POST">
 						{% csrf_token %}
 						<input type="text" name="Name" placeholder="Name">
